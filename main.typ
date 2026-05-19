@@ -1431,42 +1431,41 @@ where $tilde.op$ is the equivalence relation defined by $xi tilde.op xi'$ if $xi
 
 #theorem(name: "Dolbeault's lemma")[ 
     Suppose $X = B_R (0)$ with $0 < R <= oo$ and $g in cal(E)(X)$, then there exists $f in cal(E)(X)$ such that $(partial F)/partial overline(z) = g$.
-    
 ]
 
 #proof[
-        We first assume that $g$ has compact support and $X = CC$. For $zeta in CC$, define
-        $
-        f(zeta) = (1)/(2pi i) integral.double_(CC) (g(z))/(z - zeta) d z and d overline(z).
-        $
-        Fix $zeta in CC$, and let $z = zeta + r e^(i theta)$, then $d z and d overline(z) = -2 i r d r and d theta$. Since $g$ has compact support, there exists $r_0 > 0$ such that $g(z) = 0$ for every $r >= r_0$. Hence
-        $
-        f(zeta) = (1)/(2pi i) integral.double_(0 <= r <= r_0) (g(zeta + r e^(i theta)))/(r e^(i theta)) (-2 i r) d r and d theta = -(1)/(pi) integral.double_(0 <= r <= r_0) g(zeta + r e^(i theta)) e^(-i theta) d r and d theta.
-        $
-        Since $g$ is infinitely partialerentiable, we can partialerentiate under the integral sign and get
-        $
-            ((partial F))/(partial overline(zeta)) &= -(1)/(pi) integral.double_(0 <= r <= r_0) (partial g)/(partial overline(zeta)) (zeta + r e^(i theta)) e^(-i theta) d r and d theta \
-            &= (1)/(2pi i) lim_(epsilon -> 0) integral.double_(epsilon <= |z - zeta| <= r_0) (partial g)/(partial overline(z)) (z) (1)/(z - zeta) d z and d overline(z).
-        $
-        Let
-        $
-        w(z) = (1)/(2pi i) (g(z))/(z - zeta) d z ~> d w = (1)/(2pi i) (partial g)/(partial overline(z)) (1)/(z - zeta) d overline(z) and d z,
-        $
-        then by Stokes' theorem,
-        $
-        lim_(epsilon -> 0) integral.double_(epsilon <= |z - zeta| <= r_0) (partial g)/(partial overline(z)) (1)/(z - zeta) d z and d overline(z) = & -lim_(epsilon -> 0) integral.double_(epsilon <= |z - zeta| <= r_0) d w \
-        = & -lim_(epsilon -> 0) integral_(|z - zeta| = r_0) w + lim_(epsilon -> 0) integral_(|z - zeta| = epsilon) w \
-        = & 0 + lim_(epsilon -> 0) (1)/(2pi) integral_0^(2pi) g(zeta + epsilon e^(i theta)) d theta = g(zeta).
-        $
+    We first assume that $g$ has compact support and $X = CC$. For $zeta in CC$, define
+    $
+    f(zeta) = (1)/(2pi i) integral.double_(CC) (g(z))/(z - zeta) d z and d overline(z).
+    $
+    Fix $zeta in CC$, and let $z = zeta + r e^(i theta)$, then $d z and d overline(z) = -2 i r d r and d theta$. Since $g$ has compact support, there exists $r_0 > 0$ such that $g(z) = 0$ for every $r >= r_0$. Hence
+    $
+    f(zeta) = (1)/(2pi i) integral.double_(0 <= r <= r_0) (g(zeta + r e^(i theta)))/(r e^(i theta)) (-2 i r) d r and d theta = -(1)/(pi) integral.double_(0 <= r <= r_0) g(zeta + r e^(i theta)) e^(-i theta) d r and d theta.
+    $
+    Since $g$ is infinitely partialerentiable, we can partialerentiate under the integral sign and get
+    $
+        ((partial F))/(partial overline(zeta)) &= -(1)/(pi) integral.double_(0 <= r <= r_0) (partial g)/(partial overline(zeta)) (zeta + r e^(i theta)) e^(-i theta) d r and d theta \
+        &= (1)/(2pi i) lim_(epsilon -> 0) integral.double_(epsilon <= |z - zeta| <= r_0) (partial g)/(partial overline(z)) (z) (1)/(z - zeta) d z and d overline(z).
+    $
+    Let
+    $
+    w(z) = (1)/(2pi i) (g(z))/(z - zeta) d z ~> d w = (1)/(2pi i) (partial g)/(partial overline(z)) (1)/(z - zeta) d overline(z) and d z,
+    $
+    then by Stokes' theorem,
+    $
+    lim_(epsilon -> 0) integral.double_(epsilon <= |z - zeta| <= r_0) (partial g)/(partial overline(z)) (1)/(z - zeta) d z and d overline(z) = & -lim_(epsilon -> 0) integral.double_(epsilon <= |z - zeta| <= r_0) d w \
+    = & -lim_(epsilon -> 0) integral_(|z - zeta| = r_0) w + lim_(epsilon -> 0) integral_(|z - zeta| = epsilon) w \
+    = & 0 + lim_(epsilon -> 0) (1)/(2pi) integral_0^(2pi) g(zeta + epsilon e^(i theta)) d theta = g(zeta).
+    $
 
-        For general $g$, let $0 < R_0 < R_1 < dots$ such that $lim_(n -> oo) R_n = R$ and let $psi_n in cal(E)(X)$ such that $"supp" (psi_n) subset B_(R_(n+1))(0)$ and $psi_n|_(B_(R_n)(0)) = 1$ for every $n >= 0$. Define $g_n = psi_n g$, then $g_n$ has compact support, hence there exists $f_n in cal(E)(X)$ such that $overline(partial) f_n = partial f_n/partial overline(z) = g_n$.
+    For general $g$, let $0 < R_0 < R_1 < dots$ such that $lim_(n -> oo) R_n = R$ and let $psi_n in cal(E)(X)$ such that $"supp" (psi_n) subset B_(R_(n+1))(0)$ and $psi_n|_(B_(R_n)(0)) = 1$ for every $n >= 0$. Define $g_n = psi_n g$, then $g_n$ has compact support, hence there exists $f_n in cal(E)(X)$ such that $overline(partial) f_n = partial f_n/partial overline(z) = g_n$.
 
-        Let $\|f\|_K = sup_(z in K) |f(z)|$ be the supremum norm. Set $tilde(f)_1 = f_1$. Since $overline(partial) (f_2 - tilde(f)_1) = g_2 - g_1 = 0$ on $B_(R_1)(0)$, $f_2 - tilde(f)_1$ is holomorphic on $B_(R_1)(0)$, hence there exists a Taylor polynomial $P_1$ of $f_2 - tilde(f)_1$ at the origin such that $\|f_2 - tilde(f)_1 - P_1\|_(B_(R_0)(0)) < 1/2$. Define $tilde(f)_2 = f_2 - P_1$, then $\|tilde(f)_2 - tilde(f)_1\|_(B_(R_0)(0)) < 1/2$. Inductively, we can define $tilde(f)_n$ such that $\|tilde(f)_(n+1) - tilde(f)_n\|_(B_(R_(n-1))(0)) < 1/2^n$ and $overline(partial) tilde(f)_n = g_n$ for every $n >= 1$. Let $f = lim_(n -> oo) tilde(f)_n$. On $B_(R_n)(0)$, we may write
-        $
-        f = tilde(f)_n + sum_(k = n)^oo (f_(k+1) - tilde(f)_k),
-        $
-        since $tilde(f)_(k+1) - tilde(f)_k in cal(O)(B_(R_(n-1))(0))$ and $\|f_(k+1) - tilde(f)_k\|_(B_(R_n)(0)) < 1/2^k$ for every $k >= n$, the above series converges uniformly on $B_(R_n)(0)$, hence $f$ is infinitely partialerentiable on $X$. Moreover, $overline(partial) f = overline(partial) tilde(f)_n = g_n$ on $B_(R_n)(0)$ for every $n >= 1$, hence $overline(partial) f = g$ on $X$, which completes the proof.
-     $qed$
+    Let $\|f\|_K = sup_(z in K) |f(z)|$ be the supremum norm. Set $tilde(f)_1 = f_1$. Since $overline(partial) (f_2 - tilde(f)_1) = g_2 - g_1 = 0$ on $B_(R_1)(0)$, $f_2 - tilde(f)_1$ is holomorphic on $B_(R_1)(0)$, hence there exists a Taylor polynomial $P_1$ of $f_2 - tilde(f)_1$ at the origin such that $\|f_2 - tilde(f)_1 - P_1\|_(B_(R_0)(0)) < 1/2$. Define $tilde(f)_2 = f_2 - P_1$, then $\|tilde(f)_2 - tilde(f)_1\|_(B_(R_0)(0)) < 1/2$. Inductively, we can define $tilde(f)_n$ such that $\|tilde(f)_(n+1) - tilde(f)_n\|_(B_(R_(n-1))(0)) < 1/2^n$ and $overline(partial) tilde(f)_n = g_n$ for every $n >= 1$. Let $f = lim_(n -> oo) tilde(f)_n$. On $B_(R_n)(0)$, we may write
+    $
+    f = tilde(f)_n + sum_(k = n)^oo (f_(k+1) - tilde(f)_k),
+    $
+    since $tilde(f)_(k+1) - tilde(f)_k in cal(O)(B_(R_(n-1))(0))$ and $\|f_(k+1) - tilde(f)_k\|_(B_(R_n)(0)) < 1/2^k$ for every $k >= n$, the above series converges uniformly on $B_(R_n)(0)$, hence $f$ is infinitely partialerentiable on $X$. Moreover, $overline(partial) f = overline(partial) tilde(f)_n = g_n$ on $B_(R_n)(0)$ for every $n >= 1$, hence $overline(partial) f = g$ on $X$, which completes the proof.
+    $qed$
 ]
 
 #theorem[
@@ -1625,7 +1624,7 @@ d f = ((partial F))/(partial z) d z + ((partial F))/(partial overline(z)) d over
 $
 for every $f in cal(E)(frak(U))$, then $(partial F)/partial z d z$ is the $(1, 0)$-part of $d f$ and $(partial F)/partial overline(z) d overline(z)$ is the $(0, 1)$-part of $d f$. We denote $(partial F)/partial z d z$ by $d' f$ and $(partial F)/partial overline(z) d overline(z)$ by $d'' f$, then we have $d f = d' f + d'' f$. Note that $d'^2 = 0$, $d''^2 = 0$. 
 
-#theorem(name: "General form for Dolbeault's lemma")[ 
+#theorem(id: "thm:general_dolbeault_i", name: "General form (I) for Dolbeault's lemma")[ 
     Let $X$ be a non-compact Riemann surface and $Y subset.double Y' subset.double X$, $omega in cal(E)^(0, 1)(Y')$ , then there exists $g in cal(E)(Y)$ such that $d'' g = omega$ on $Y$.
     
 ]
@@ -2876,14 +2875,12 @@ A weak solution is weak in the sense that it may not be a meromorphic function o
      $qed$
 ]
 
-#lemma[
+#lemma(id: "lm:weak-solution-of-boundary")[
     Let $c: [0, 1] -> X$ be a curve on $X$ and $U subset.double X$ with $c([0, 1]) subset U$. Then exists a weak solution $f$ of $partial c$ with $f|_(X without U) equiv 1$ such that for all $omega in cal(E)^((1))(X)$ with $d omega = 0$, we have
     $
     integral_c omega = (1)/(2pi i) integral.double_X (d f)/(f) and omega.
     $
-    
 ]
-
 #proof[
         Suppose that $U tilde.equiv B_1(0) subset.eq CC$. Let $a = c(0)$ and $b = c(1)$. Let $c([0, 1]) subset B_r(0)$ for some $r < 1$. Note that $(z - a)/(z - b)$ is nowhere vanishing holomorphic function on $\{ r < |z| < 1 \}$, hence exists a well-defined holomorphic branch of $log (z - a)/(z - b)$ on $\{ r < |z| < 1 \}$. Choose $psi in cal(E)(U)$ such that $psi = 1$ on $B_r(0)$ and $"supp" (psi) subset B_(r')(0)$ for some $r < r' < 1$. Define
         $
@@ -3289,7 +3286,7 @@ for every $omega in cal(E)^(0, 1)(Y)$, $j in J$ and $alpha in (NN union \{ 0 \})
     $Y$ is not Runge in $CC$ since $B_1 (0)$ is a connected component of $CC without Y$ that is compact. However, $Y$ is Runge in $CC^*$ since $B_1 (0)^*$ is not compact. 
 ]
 
-#proposition[
+#proposition(id: "prop:dense_restriction")[
     Let $X$ be a non-compact Riemann surface and $Y subset.double X$ be a Runge domain. If $Y subset Y' subset.double X$, then the image of the restriction map $beta: cal(O)(Y') -> cal(O)(Y)$ is dense in $cal(O)(Y)$. 
 ]
 #proof[
@@ -3402,5 +3399,141 @@ Let $X$ be a Riemann surface and $K subset X$ be nonempty. Recall that $h_X(K)$ 
     X = union.big_(j=0)^oo K_j subset.eq union.big_(j=0)^oo Y_j subset.eq X,
     $
     so $union.big_(j=0)^oo Y_j = X$.
+    $qed$
+]
+
+== Runge Approximation
+
+#theorem(id: "thm:runge_approximation", name: "Runge Approximation Theorem")[
+    Let $X$ be a non-compact Riemann surface and $Y subset X$ be a Runge domain. Then for all holomorphic function $f in cal(O)(Y)$ and every compact subset $K subset Y$, there exists a sequence of holomorphic functions ${f_j}$ on $X$ such that $f_j -> f$ uniformly on $K$.
+]
+#proof[
+    By replacing $f$ by $f|_V$ with $K subset V subset.double X$, we may assume that $Y subset.double X$. Let $Y = Y_0 subset.double Y_1 subset.double dots subset.double X$ be a special exhaustion of $X$ by Runge domains. By @prop:dense_restriction, exists $f_1 in cal(O)(Y_1)$ such that $||f_1 - f||_K < epsilon/2$. For $j >= 2$, by repeatedly applying @prop:dense_restriction, we can find $f_j in cal(O)(Y_j)$ such that $||f_j - f_(j-1)||_K < epsilon/2^j$. For every $n in NN$, the sequence $(f_j)_(j>n)$ converges uniformly on $Y_n$, hence converges to some holomorphic $g_n in cal(O)(Y_n)$. Note that $g_(n+1)|_(Y_n) = g_n$ for every $n$, so we can glue $g_n$ to get a holomorphic function $g in cal(O)(X)$ such that $g|_(Y_n) = g_n$ for every $n$, hence $f_j -> g$ uniformly on $K$. Since $||g - f||_K <= ||g - f_j||_K + ||f_j - f||_K < epsilon/2 + epsilon/2 = epsilon$, we conclude that every holomorphic function on $Y$ can be approximated uniformly on compact subsets by holomorphic functions on $X$.
+]
+
+#theorem(name: "General form (II) for Dolbeaut's lemma")[
+    Let $X$ be a non-compact Riemann surface. For every $omega in cal(E)^(0, 1)(X)$, there exists $f in cal(E)(X)$ such that $d''f = omega$.
+]
+#proof[
+    Pick $Y_0$ from @thm:general_dolbeault_i, such that $omega$ has local primitive on $Y_0$ and $Y_0 subset.double X$. Let $Y_0 subset.double Y_1 subset.double dots subset.double X$ be a special exhaustion of $X$ by Runge domains. We will construct functions $f_n in cal(E)(Y_n)$ such that $d''f_n = omega|_(Y_n)$ and $||f_(n+1) - f_n||_(overline(Y_(n-1))) <= 2^(-n)$. 
+
+    Begin by choosing $f_0 in cal(E)(Y_0)$ such that $d''f_0 = omega|_(Y_0)$. Suppose that $f_0, dots, f_n$ have been constructed. By @thm:general_dolbeault_i, exists $g in cal(E)(Y_(n+1))$ such that $d''g = omega|_(Y_(n+1))$. On $Y_n$, $d''g = d''f_n = omega|_(Y_(n+1))$, $g - f_n in cal(O)(Y_n)$, so by @thm:runge_approximation, exists $h in cal(O)(Y_(n+1))$ such that $||h - (g - f_n)||_(overline(Y_(n-1))) < 2^(-n)$. Set $f_(n+1) = g - h in cal(E)(Y_(n+1))$, then $d''f_(n+1) = d''g = omega|_(Y_(n+1))$ and $||f_(n+1) - f_n||_(overline(Y_(n-1))) = ||h - (g - f_n)||_(overline(Y_(n-1))) < 2^(-n)$. Let $f = lim_(n -> oo) f_n$. Since
+    $
+    f = f_n + sum_(k=n)^oo (f_(k+1) - f_k),
+    $
+    $f in cal(E)(Y_n)$ for every $n$, so $f in cal(E)(X)$. Also, 
+    $
+    d''f = d''f_n + sum_(k=n)^oo d''(f_(k+1) - f_k) = omega|_(Y_n) + sum_(k=n)^oo (omega|_(Y_(k+1)) - omega|_(Y_k)) = omega|_(Y_n) = omega
+    $
+    on $Y_n$ for every $n$, hence $d''f = omega$ on $X$.
+    $qed$
+]
+
+#corollary[
+    Suppose $X$ is a non-compact Riemann surface, then
+    $
+    H^1(X, cal(O)) = 0.
+    $
+]
+#proof[
+    By the general form of Dolbeault's lemma, for every $cal(E)^(0, 1)(X) = d''(cal(E)(X))$, so $H^1(X, cal(O)) = cal(E)^(0, 1)(X) slash d''cal(E)(X) = 0$.
+    $qed$
+]
+
+#lemma[
+    Every divisor $D$ on a non-compact Riemann surface $X$ has a weak solution. 
+]
+#proof[
+    Let $K_0 subset K_1 subset dots$ be a sequence of compact subsets such that
+    + $K_j$ is Runge in $X$ for every $j$;
+    + $K_(j-1) subset K_j^circle.small$ for every $j$;
+    + $union.big_(j=0)^oo K_j = X$.
+
+    Let $a_0 in X without K_(j_0)$. We claim that there exists a weak solution $f$ of $a_0$ with $f|_(K_(j_0)) equiv 1$. Since $K_(j_0)$ is Runge, $a_0 in U$ for some connected component of $X without K_(j_0)$ and $U$ is not relatively compact in $X$, i.e. $U subset.not K_(j_0 + 1)$. Pick $a_1 in U without K_(j_0 + 1)$ and let $c_0$ be a curve in $U$ from $a_1$ to $a_0$. By @lm:weak-solution-of-boundary, there exists a weak solution $f_0$ of $partial c_0 = a_1 - a_0$ with $f_0|_(X without U) equiv 1$. Similarly, for $a_l in X without K_(j_0 + l)$ and $c_l$ a curve in $X without K_(j_0 + l)$ from $a_(l+1)$ to $a_l$, exists a weak solution $f_l$ of $partial c_l = a_(l+1) - a_l$ with $f_l|_(K_(j_0 + l)) equiv 1$. Let $f = product_(l=0)^oo f_l$. For every $x in X$, $x in K_(j_0 + n)$ for some $n$, so $f|_(K_(j_0 + n)) = product_(l=0)^n f_l$ is well-defined, hence $f$ is a well-defined weak solution of $a_0$ with $f|_(K_(j_0)) equiv 1$.
+
+    Given an arbitrary divisor $D in "Div"(X)$, for $j in N$, define
+    $
+    D_j (x) = cases(
+        D(x) & "if" x in K_j without K_(j-1) ,
+        0 & "if" x in.not K_j without K_(j-1)
+    ).
+    $
+    Since each $K_j$ is compact, the divisor $D_j$ is a finite sum, hence by the previous claim, there exists a weak solution $g_j$ of $D_j$ with $g_j|_(K_(j-1)) equiv 1$. Since $D(x) = sum_j D_j(x)$, the function $g = product_(j=0)^oo g_j$ is a well-defined weak solution of $D$. 
+]
+
+#theorem(name: "Weierstrass Product Theorem")[
+    Let $X$ be a non-compact Riemann surface, then for any divisor $D in "Div"(X)$, there exists a non-constant meromorphic function $f in cal(M)^* (X)$ such that $(f) = D$. 
+]
+#proof[
+    Fix $x in X$, then there exists a relatively compact neighborhood $U_x$ of $x$ and a chart $(U_x, z)$ isomorphic to the unit disk, then $D|_(U_x)$ is finite, say $D|_(U_x) = sum_(i=1)^n r_i a_i$, then we can find a local solution $f_x(z) := product_(i=1)^n (z - a_i)^(r_i) in cal(M)^* (U_x)$ such that $(f_x) = D|_(U_x)$. Running through all $x in X$, there exists an open covering $frak(U) = (U_i)_(i in I)$ of $X$ and a family of local solutions $(f_i)_(i in I)$ such that $f_i in cal(M)^* (U_i)$ and $(f_i) = D|_(U_i)$ for every $i$. On the intersections, we have
+    $
+    (f_i)|_(U_i inter U_j) = D|_(U_i inter U_j) = (f_j)|_(U_i inter U_j) => (f_i)/(f_j) in cal(O)^* (U_i inter U_j).
+    $
+    By the previous lemma, there exists a global weak solution $psi$ of $D$. Write $psi = psi_i f_i$ on $U_i$, so that $psi_i in cal(E)(U_i)$ has no zeros. Since each $U_i$ is simply connected, there exists a logarithm $phi_i = log psi_i$ on $U_i$. On the intersections, we have
+    $
+    psi = f_j e^(phi_j) = f_i e^(phi_i) => e^(phi_j - phi_i) = (f_i)/(f_j) in cal(O)^* (U_i inter U_j),
+    $
+    so $phi_j - phi_i in cal(O)(U_i inter U_j)$. Define $phi_(i j) = phi_j - phi_i$, then $(phi_(i j)) in Z^1(frak(U), cal(O))$. Since $H^1(X, cal(O)) = 0$, we have $(phi_(i j)) in B^1(frak(U), cal(O))$, so exists a family of holomorphic functions $(g_i)_(i in I)$ such that $phi_j - phi_i = g_j - g_i$ on $U_i inter U_j$. Note that
+    $
+    e^(g_j - g_i) = e^(phi_j - phi_i) = (f_i)/(f_j) => f_i e^(g_i) = f_j e^(g_j)
+    $
+    on $U_i inter U_j$, so we can glue $f_i e^(g_i)$ to get a global meromorphic function $f in cal(M)^* (X)$ such that $f|_(U_i) = f_i e^(g_i)$ for every $i$, hence $(f) = D$.
+]
+
+#corollary[
+    On every non-compact Riemann surface, there exists a holomorphic 1-form $omega in Omega(X)$ without zeros.
+]
+#proof[
+    Let $g in cal(M)(X)$ be a non-constant meromorphic function, and set $D = -(d g)$, then by the Weierstrass product theorem, there exists a non-constant meromorphic function $f in cal(M)^* (X)$ such that $(f) = D$, then $omega := f thin d g$ is a holomorphic 1-form without zeros since $(omega) = (f) + (d g) = D - D = 0$.
+]
+
+#theorem[
+    Let $X$ be a non-compact Riemann surface and $(a_j)_(j in NN)$ is a sequence of discrete points, then given any sequence of complex numbers $(c_j)_(j in NN)$, there exists a holomorphic function $f in cal(O)(X)$ such that $f(a_j) = c_j$ for every $j$.
+]
+#proof[
+    Exists a holomorphic function $h in cal(O)(X)$ such that $(h) = sum_(j in NN) a_j$. Let $U_j = X without union_(l != j) {a_l}$, then $frak(U) := (U_j)_(j in NN)$ is an open cover of $X$. Let $g_j = (c_j)/h in cal(M)(U_j)$, then on the intersections $U_j inter U_k$, we have
+    $
+    g_j - g_k = (c_j - c_k)/h in cal(O)(U_j inter U_k),
+    $
+    so $(g_j - g_k) in Z^1(frak(U), cal(O))$. Since $H^1(X, cal(O)) = 0$, we have $(g_j - g_k) in B^1(frak(U), cal(O))$, so exists a global meromorphic function $g in cal(M)(X)$ such that $g|_(U_j) - g_j in cal(O)(U_j)$ for every $j$. Let $f = g h$, then on $U_j$, 
+    $
+    f = g h = g_j h + (g - g_j) h = c_j + (g - g_j) h,
+    $
+    so $f(a_j) = c_j$ for every $j$.
+]
+
+Recall that on a simply connected Riemann surface, 
+$
+"Rh"_(cal(O))^1 (X) := Omega(X) slash d cal(O)(X) = 0
+$
+since $H^1(X, CC) = 0$. 
+
+#lemma[
+    Suppose $X$ is a Riemann surface with $"Rh"_(cal(O))^1 (X) = 0$, then
+    + for every holomorphic function $f in cal(O)^* (X)$, there exists $g in cal(O)(X)$ such that $f = e^g$;
+    + every harmonic function $u: X -> RR$ is the real part of some holomorphic function $f in cal(O)(X)$.
+]
+#proof[
+    + Note that $(d f)/f in Omega(X)$, so since $"Rh"_(cal(O))^1 (X) = 0$, exists $g_1 in cal(O)(X)$ such that $d g_1 = (d f)/f$, hence
+    $
+    d(f e^(-g_1)) = d f thin e^(-g_1) + f thin (-e^(-g_1) d g_1) = 0 => f thin e^(-g_1) equiv c in CC^*
+    $
+    set $g = g_1 + log c$ to get $f = e^g$.
+    + Exists $omega in Omega(X)$ such that $"Re" omega = d u$. Since $Omega(X) = d cal(O)(X)$, exists $f in cal(O)(X)$ such that $d f = omega$, so $"Re" d f = "Re" omega = d u$, hence $u - "Re" f$ is a constant, so $u$ is the real part of the holomorphic function $f + i c$ for some $c in RR$.
+]
+
+#theorem[
+    Suppose $X$ is a non-compact Riemann surface and $Y subset.double X$ is an open set, such that $"Rh"_(cal(O))^1 (Y) = 0$ and $Y$ has regular boundary. Then there exists a biholomorphic mapping from $Y$ to the unit disk. 
+]
+#proof[
+    For $a in Y$, exists $g in cal(O)(X)$ such that $(g) = a$. Exists $u in C_(RR)(overline(Y))$ such that $u|_Y$ is harmonic and $u|_(partial Y) = log |g|$. By the previous lemma, exists $h in cal(O)(Y)$ such that $u = "Re" h$. Set $f := e^(-h) g in cal(O)(Y)$, then
+    $
+    |f| = |e^(-h + log g)| = e^(-u + log |g|). 
+    $
+    On $partial Y$, $e^(-u + log |g|) = 1$, so $|f|$ can be continued to a continuous function $phi$ on $overline(Y)$. By maximum principle, $|f| < 1$ on $Y$, so $f(Y) subset DD$. We now show that the mapping is proper. It suffices to show that for every $r < 1$, the preimage $Y_r$ of the disk $overline(B_R(0))$ is compact in $Y$. But
+    $
+    f^(-1) (overline(B_R(0))) = { y in Y : |f(y)| <= r } = { y in overline(Y) : phi(y) <= r }
+    $
+    is closed in $overline(Y)$, hence compact. Therefore, $f$ is a proper holomorphic mapping from $Y$ to $DD$. Since the value zero is taken exactly once by $f$ at $a$, $f$ is a biholomorphism from $Y$ to $DD$.
     $qed$
 ]
