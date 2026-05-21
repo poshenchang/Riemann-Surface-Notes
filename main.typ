@@ -3480,7 +3480,7 @@ Let $X$ be a Riemann surface and $K subset X$ be nonempty. Recall that $h_X(K)$ 
     on $U_i inter U_j$, so we can glue $f_i e^(g_i)$ to get a global meromorphic function $f in cal(M)^* (X)$ such that $f|_(U_i) = f_i e^(g_i)$ for every $i$, hence $(f) = D$.
 ]
 
-#corollary[
+#corollary(id: "cl:non-vanishing-1-form")[
     On every non-compact Riemann surface, there exists a holomorphic 1-form $omega in Omega(X)$ without zeros.
 ]
 #proof[
@@ -3515,14 +3515,14 @@ since $H^1(X, CC) = 0$.
 ]
 #proof[
     + Note that $(d f)/f in Omega(X)$, so since $"Rh"_(cal(O))^1 (X) = 0$, exists $g_1 in cal(O)(X)$ such that $d g_1 = (d f)/f$, hence
-    $
-    d(f e^(-g_1)) = d f thin e^(-g_1) + f thin (-e^(-g_1) d g_1) = 0 => f thin e^(-g_1) equiv c in CC^*
-    $
-    set $g = g_1 + log c$ to get $f = e^g$.
+        $
+        d(f e^(-g_1)) = d f thin e^(-g_1) + f thin (-e^(-g_1) d g_1) = 0 => f thin e^(-g_1) equiv c in CC^*
+        $
+        set $g = g_1 + log c$ to get $f = e^g$.
     + Exists $omega in Omega(X)$ such that $"Re" omega = d u$. Since $Omega(X) = d cal(O)(X)$, exists $f in cal(O)(X)$ such that $d f = omega$, so $"Re" d f = "Re" omega = d u$, hence $u - "Re" f$ is a constant, so $u$ is the real part of the holomorphic function $f + i c$ for some $c in RR$.
 ]
 
-#theorem[
+#theorem(id: "thm:simple-riemann-mapping")[
     Suppose $X$ is a non-compact Riemann surface and $Y subset.double X$ is an open set, such that $"Rh"_(cal(O))^1 (Y) = 0$ and $Y$ has regular boundary. Then there exists a biholomorphic mapping from $Y$ to the unit disk. 
 ]
 #proof[
@@ -3536,4 +3536,46 @@ since $H^1(X, CC) = 0$.
     $
     is closed in $overline(Y)$, hence compact. Therefore, $f$ is a proper holomorphic mapping from $Y$ to $DD$. Since the value zero is taken exactly once by $f$ at $a$, $f$ is a biholomorphism from $Y$ to $DD$.
     $qed$
+]
+
+== Riemann Mapping Theorem
+
+#theorem(name: "Riemann Mapping Theorem")[
+    Let $X$ be a Riemann surface with $"Rh"_(cal(O))^1 (X) = 0$, then $X$ is biholomorphic to either $PP^1$, $CC$ or $DD$.
+]
+#proof[
+    If $X$ is compact, then every holomorphic function on $X$ is constant, so $"Rh"_(cal(O))^1 (X) = Omega(X) slash d cal(O)(X) = Omega(X)$, so $Omega(X) = 0$. Since $dim Omega(X) = g(X)$, we have $g(X) = 0$, so $X$ is biholomorphic to $PP^1$. 
+
+    Suppose $X$ is non-compact. Let $Y_0 subset.double Y_1 subset.double Y_2 subset.double dots.c$ be a special exhaustion of $X$ by Runge domains. We claim that $"Rh"_(cal(O))^1 (Y_i) = 0$ for each $i$. By @cl:non-vanishing-1-form, there exists a holomorphic 1-form $omega_0 in Omega(X)$ without zeros. Let $omega in Omega(Y_i)$ be an arbitrary holomorphic 1-form, then $omega = h omega_0$ for some meromorphic function $h$ on $Y_i$, but since $(h) = (omega) - (omega_0) >= 0$, $h$ is holomorphic. Let $alpha$ be a closed curve in $Y_i$, and let $K subset Y_i$ be some compact subset containing $alpha$. By Runge approximation, exists ${h_n} subset cal(O)(X)$ such that $h_n -> h$ uniformly on $K$, so
+    $
+    integral_alpha h_n omega_0 -> integral_alpha h omega_0 = integral_alpha omega,
+    $
+    but $integral_alpha h_n omega_0 = 0$ since $h_n omega_0$ is a holomorphic 1-form on $X$ and $"Rh"_(cal(O))^1 (X) = 0$, so $integral_alpha omega = 0$. Since $alpha$ is arbitrary, we have $omega$ has primitive on $Y_i$, so $"Rh"_(cal(O))^1 (Y_i) = 0$.
+
+    By @thm:simple-riemann-mapping, for each $i$, there exists a biholomorphic mapping $g_i: Y_i -> DD$. Choose a point $a in Y_0$ and a chart $(U, z)$ around $a$ with $U subset Y_0$ and $z(a) = 0$. By some linear fractional transformations, exists some $f_i$ mapping $Y_i$ to some disk centered at $0$ with radius $r_i$ in $CC$. We claim that $r_n <= r_(n+1)$ for every $n$. Consider the mapping $h := f_(n+1) compose f_n^(-1)$, which sends $B_(r_n)$ to $B_(r_(n+1))$ and satisfies $h(0) = 0$ and $h'(0) = 1$. By Cauchy's integral formula, for $alpha = partial overline(B_(r_n-epsilon)(0))$ for $epsilon$ small, we have
+    $
+    h'(0) = 1/(2 pi i) integral.cont_alpha (h(z))/(z^2) d z,
+    $
+    so
+    $
+    |h'(0)| <= 1/(2 pi) integral.cont_alpha (|h(z)|)/(|z|^2) |d z| <= 1/(2 pi) (r_(n+1))/(r_n - epsilon)^2 2 pi (r_n - epsilon) = r_(n+1)/(r_n - epsilon),
+    $
+    hence $r_n <= r_(n+1)$ since $epsilon$ is arbitrary. Define $R = lim_(n -> oo) r_n in (0, oo]$. We claim that $X$ is biholomorphic to $B_R(0)$. 
+
+    The mapping $z |-> f_0^(-1)(r_0 z)$ maps $D$ to $Y_0$ biholomorphically. Set
+    $
+    g_n(z) := 1/(r_0) f_n (f_0^(-1)(r_0 z)),
+    $
+    then $g_n: DD -> CC$ is an injective holomorphic mapping with $g_n(0) = 0$ and $g_n'(0) = 1$. By @thm:injective-holomorphic-compact, exists a subsequence ${g_(n_k^0)}$ of ${g_n}$ that converges uniformly on compact subsets, then ${f_(n_k^0)}$ also converges uniformly on compact subsets. Similarly, we can find a subsequence ${f_(n_k^1)}$ of ${f_(n_k^0)}$ that converges uniformly on compact subsets, and so on. By diagonalization, pick the subsequence ${f_(n_k)} = {f_(n_k^k)}$, then for every $m$, the sequence ${f_(n_k)}_(k>=m)$ converges uniformly on compact subsets of $Y_m$. Let $f = lim_(k -> oo) f_(n_k)$, then $f$ is an injective holomorphic mapping from $X$ to $B_R(0)$ such that $f(0) = 0$ and $f'(0) = 1$. We claim that $f$ is surjective. If not, then we have $"Rh"_(cal(O))^1 (X) = "Rh"_(cal(O))^1 (f(X)) = 0$. By @lm:shrink-holomorphic, exists some $r < R$ and holomorphic function $g: f(X) -> B_r(0)$ such that $g(0) = 0$ and $g'(0) = 1$. Choose $n$ large enough such that $r_n > r$ and set $h = g compose f compose f_n^(-1): B_(r_n)(0) -> B_r(0)$, then $h(0) = 0$ and $h'(0) = 1$, contradicting the Schwarz lemma since $r_n > r$. Therefore, $f$ is a biholomorphic mapping from $X$ to $B_R(0)$, so $X$ is biholomorphic to $B_R(0)$. If $R = oo$, then $X$ is biholomorphic to $CC$, otherwise, $X$ is biholomorphic to $DD$.
+    $qed$
+]
+
+// --------------------------------
+
+#theorem(id: "thm:injective-holomorphic-compact")[
+    The set of all injective holomorphic functions from $DD$ to $CC$ with $f(0) = 0$ and $f'(0) = 1$ is compact in $cal(O)(DD)$.
+]
+
+#lemma(id: "lm:shrink-holomorphic")[
+    If $0 in Y subset.neq B_R(0)$ with $0 < R <= oo$ and $"Rh"_(cal(O))^1 (Y) = 0$, then there exists some $r < R$ and holomorphic function $f: Y -> B_r(0)$ such that $f(0) = 0$ and $f'(0) = 1$.
 ]
