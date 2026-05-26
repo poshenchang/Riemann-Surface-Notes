@@ -603,7 +603,7 @@ Note that the fibers of a covering map have the same cardinality, hence we say $
 
     If $G = 0$, then $X^* tilde.equiv H$, which implies that $p$ has an infinite fiber, contradicting the fact that $p$ is proper. Hence $G = k ZZ$ for some $k in NN$. Let $p_k$ denote the map $p_k: DD^* -> DD^*, z |-> z^k$. Note that $p_*(pi_1(X^*, x_0)) = p_(k*)(pi_1(DD^*, z_0))$, hence $p$ and $p_k$ are isomorphic as covering maps. Since $p$ and $p_k$ are locally biholomorphic, the isomorphism between $p$ and $p_k$ is in fact a local biholomorphism, hence an isomorphism of holomorphic covering maps. It now remains to show that $p$ can be extended to a holomorphic map on $X$.
 
-    If $p^(-1)(0) = \{ b_1, dots.h, b_n \}$, then exists disjoint neighborhoods $V_i$ of $b_i$ and $B_r(0)$ of $0$ such that $p^(-1)(B_r(0)) subset.eq union.big_(i=1)^n V_i$. However, $p^(-1)(B_r(0)^*) tilde.equiv p_k^(-1)(B_r(0)^*) = B_(root(k, r))(0)^*$, which is connected, hence $p^(-1)(B_r(0))$ is connected, which implies that $n = 1$. Thus $p^(-1)(0) = \{ b_1 \}$, which implies that $p|_(X^*)$ can be extended to a holomorphic map on $X$ by defining $p(b_1) = 0$. Hence $p$ is isomorphic to the map $DD -> DD, z|-> z^k$ for some $k in NN$.
+    If $p^(-1)(0) = \{ b_1, dots.h, b_n \}$, then exists disjoint neighborhoods $V_i$ of $b_i$ and $B_r (0)$ of $0$ such that $p^(-1)(B_r (0)) subset.eq union.big_(i=1)^n V_i$. However, $p^(-1)(B_r (0)^*) tilde.equiv p_k^(-1)(B_r (0)^*) = B_(root(k, r))(0)^*$, which is connected, hence $p^(-1)(B_r (0))$ is connected, which implies that $n = 1$. Thus $p^(-1)(0) = \{ b_1 \}$, which implies that $p|_(X^*)$ can be extended to a holomorphic map on $X$ by defining $p(b_1) = 0$. Hence $p$ is isomorphic to the map $DD -> DD, z|-> z^k$ for some $k in NN$.
     $qed$
 ]
 
@@ -708,7 +708,7 @@ Algebraic functions are functions that satisfy a polynomial equation with coeffi
     $
     T^n + c_1(0)T^(n-1) + dots + c_n(0) in CC[T],
     $
-    then there exists $0 < r <= R$ and a holomorphic function $phi.alt in cal(O)(B_r(0))$ such that $phi.alt(0) = w_0$ and
+    then there exists $0 < r <= R$ and a holomorphic function $phi.alt in cal(O)(B_r (0))$ such that $phi.alt(0) = w_0$ and
     $
     phi.alt^n + c_1phi.alt^(n-1) + dots + c_n = 0.
     $
@@ -718,15 +718,15 @@ Algebraic functions are functions that satisfy a polynomial equation with coeffi
     $
     F(z, w) = w^n + c_1(z)w^(n-1) + dots + c_n(z).
     $
-    By assumption, there exists $epsilon > 0$ such that $F(0, w)$ has a unique zero in $B_epsilon (w_0)$. Since $F(0, w) != 0$ on $partial B_epsilon (w_0)$, by continuity, there exists $0 < r <= R$ such that $F(z, w) != 0$ on $partial B_epsilon (w_0)$ for every $z in B_r(0)$. By the argument principle, for every $z_0 in B_r(0)$,
+    By assumption, there exists $epsilon > 0$ such that $F(0, w)$ has a unique zero in $B_epsilon (w_0)$. Since $F(0, w) != 0$ on $partial B_epsilon (w_0)$, by continuity, there exists $0 < r <= R$ such that $F(z, w) != 0$ on $partial B_epsilon (w_0)$ for every $z in B_r (0)$. By the argument principle, for every $z_0 in B_r (0)$,
     $
     n(z_0) := (1)/(2pi i) integral_(partial B_epsilon (w_0)) ((partial F)/partial w(z_0, w))/(F(z_0, w)) d w
     $
-    is the number of zeros of $F(z_0, w)$ in $B_epsilon (w_0)$ counting multiplicity. Since $n(z_0)$ is an integer-valued continuous function on $B_r(0)$, $n(z_0)$ is constant on $B_r(0)$. Since $n(0) = 1$, we have $n(z_0) = 1$ for every $z_0 in B_r(0)$. Recall that
+    is the number of zeros of $F(z_0, w)$ in $B_epsilon (w_0)$ counting multiplicity. Since $n(z_0)$ is an integer-valued continuous function on $B_r (0)$, $n(z_0)$ is constant on $B_r (0)$. Since $n(0) = 1$, we have $n(z_0) = 1$ for every $z_0 in B_r (0)$. Recall that
     $
     (1)/(2pi i) integral_(partial B_epsilon (w_0)) (w (partial F)/partial z(z_0, w))/(F(z_0, w)) d w
     $
-    is equal to the sum of zeros of $F(z_0, w)$ in $B_epsilon (w_0)$. Define $phi.alt(z_0)$ to be the above integral, then $phi.alt$ is holomorphic on $B_r(0)$ and $F(z_0, phi.alt(z_0)) = 0$ for every $z_0 in B_r(0)$.
+    is equal to the sum of zeros of $F(z_0, w)$ in $B_epsilon (w_0)$. Define $phi.alt(z_0)$ to be the above integral, then $phi.alt$ is holomorphic on $B_r (0)$ and $F(z_0, phi.alt(z_0)) = 0$ for every $z_0 in B_r (0)$.
      $qed$
 ]
 
@@ -832,7 +832,7 @@ Similarly, if $c_i$ can be extended to meromorphic functions on $X$ for every $i
 
 == Differential Forms
 
-A differential 1-form on $B_r(0)$ can be written as $omega = f\, d x + g\, d y$ where $f, g in cal(E)(B_r(0))$ are smooth functions. The collection of all differential 1-forms on $B_r(0)$ is denoted by $cal(E)^((1))(B_r(0))$. $omega$ is closed iff $omega$ is closed iff $(partial F)/partial y = partial g/partial x$. $omega$ is exact iff there exists $F in cal(E)(B_r(0))$ such that $omega = d F = (partial F)/partial x\, d x + (partial F)/partial y\, d y$. exact implies closed, but in general closed does not imply exact.
+A differential 1-form on $B_r (0)$ can be written as $omega = f\, d x + g\, d y$ where $f, g in cal(E)(B_r (0))$ are smooth functions. The collection of all differential 1-forms on $B_r (0)$ is denoted by $cal(E)^((1))(B_r (0))$. $omega$ is closed iff $omega$ is closed iff $(partial F)/partial y = partial g/partial x$. $omega$ is exact iff there exists $F in cal(E)(B_r (0))$ such that $omega = d F = (partial F)/partial x\, d x + (partial F)/partial y\, d y$. exact implies closed, but in general closed does not imply exact.
 
 Let $X$ be a Riemann surface, a differential 1-form on $X$ is a collection of differential 1-forms on each chart of $X$ such that they are compatible on the overlaps, i.e. on each char $U subset X$, $omega|_U = f\, d x + g\, d y$ where $f, g in cal(E)(U)$ are smooth functions. Given a covering map $p: Y-> X$ and a differential 1-form $omega$ on $X$, we can define the pullback $p^*omega$ of $omega$ on $Y$ by pulling back the local expressions of $omega$. Precisely, on a local chart $U$ with $p^(-1)(U) = union.big V_i$ where $V_i$ are disjoint and $p|_(V_i): V_i -> U$ is a homeomorphism, if $omega|_U = f\, d x + g\, d y$, then $(p^*omega)|_(V_i) = (f compose p)\, d(x compose p) + (g compose p)\, d(y compose p)$. Given a closed differential 1-form $omega$ on $X$, we would like to know whether there exists a holomorphic function $F$ on $Y$ such that $d F = p^*omega$.
 
@@ -934,7 +934,7 @@ Let $X$ be a Riemann surface, a differential 1-form on $X$ is a collection of di
 == Linear Differential Equations
 
 #theorem(name: "Local solution")[ 
-    If $A in M(n times n, cal(O)(B_R (0)))$ is a matrix of holomorphic functions on the disk $B_R (0)$, then for every $w_0 in CC^n$, there exists a unique holomorphic function $w in M(n times 1, cal(O)(B_r(0)))$ such that $w'(z) = A(z)w(z)$ for every $z in B_R (0)$ and $w(0) = w_0$.
+    If $A in M(n times n, cal(O)(B_R (0)))$ is a matrix of holomorphic functions on the disk $B_R (0)$, then for every $w_0 in CC^n$, there exists a unique holomorphic function $w in M(n times 1, cal(O)(B_r (0)))$ such that $w'(z) = A(z)w(z)$ for every $z in B_R (0)$ and $w(0) = w_0$.
     
 ]
 
@@ -993,7 +993,7 @@ Let $omega(X)$ be the space of holomorphic 1-forms on a Riemann surface $X$, i.e
 ]
 
 #proof[
-        Note that locally we can write $A = F\, d z$ where $F in M(n times n, cal(O)(U_0))$ for some chart $U_0 tilde.equiv B_1(0)$. Hence the equation $d w = A w$ is equivalent to $d w/d z = w' = F w$, which has a unique local solution by the above theorem. Let $alpha: [0, 1] -> X$ be a curve with $alpha(0) = x_0$. If $alpha([0, t_1]) subset U_0$, then let $x_1 = alpha(t_1)$ and $c_1 = f(alpha(t_1))$, then by the above theorem again, exists a local solution $f_1 in cal(O)(U_1)^n$ with $U_1 tilde.equiv B_1(0)$ a neighborhood of $x_1$ such that $f_1(x_1) = c_1$. By the uniqueness of the local solution, $f$ and $f_1$ coincide on $U_0 inter U_1$, hence we can glue them together to get a solution on $U_0 union U_1$. Since $[0, 1]$ is compact, we can cover $alpha([0, 1])$ by finitely many charts $U_0, dots.h, U_k$ and glue the local solutions together to get a solution along the curve $alpha$. The maximal analytic continuation $(Y, p, F, y_0)$ of the local solution $f$ is a covering map, and since $X$ is simply connected, $Y tilde.equiv X$ and thus $F$ is a global solution on $X$.
+        Note that locally we can write $A = F\, d z$ where $F in M(n times n, cal(O)(U_0))$ for some chart $U_0 tilde.equiv B_1 (0)$. Hence the equation $d w = A w$ is equivalent to $d w/d z = w' = F w$, which has a unique local solution by the above theorem. Let $alpha: [0, 1] -> X$ be a curve with $alpha(0) = x_0$. If $alpha([0, t_1]) subset U_0$, then let $x_1 = alpha(t_1)$ and $c_1 = f(alpha(t_1))$, then by the above theorem again, exists a local solution $f_1 in cal(O)(U_1)^n$ with $U_1 tilde.equiv B_1 (0)$ a neighborhood of $x_1$ such that $f_1(x_1) = c_1$. By the uniqueness of the local solution, $f$ and $f_1$ coincide on $U_0 inter U_1$, hence we can glue them together to get a solution on $U_0 union U_1$. Since $[0, 1]$ is compact, we can cover $alpha([0, 1])$ by finitely many charts $U_0, dots.h, U_k$ and glue the local solutions together to get a solution along the curve $alpha$. The maximal analytic continuation $(Y, p, F, y_0)$ of the local solution $f$ is a covering map, and since $X$ is simply connected, $Y tilde.equiv X$ and thus $F$ is a global solution on $X$.
      $qed$
 ]
 
@@ -2663,7 +2663,7 @@ $
 ]
 
 #proof[
-        Pick disjoint charts $(U_k, z_k)$ around $a_k$ for every $k$ such that $z_k(a_k) = 0$ and $U_k tilde.equiv B_1(0)$. By partition of unity, exists $f_k in cal(E)(X)$ such that $0 <= f_k <= 1$, $"supp" (f_k) subset B_R (0) subset B_1(0)$ for some $R < 1$ and $f_k = 1$ on $B_epsilon (0)$ for some $0 < epsilon < R$. Since $omega in omega(X')$, $d omega = 0$ on $X'$. On $U_k' inter X'$, $f_k omega = omega$, hence
+        Pick disjoint charts $(U_k, z_k)$ around $a_k$ for every $k$ such that $z_k(a_k) = 0$ and $U_k tilde.equiv B_1 (0)$. By partition of unity, exists $f_k in cal(E)(X)$ such that $0 <= f_k <= 1$, $"supp" (f_k) subset B_R (0) subset B_1 (0)$ for some $R < 1$ and $f_k = 1$ on $B_epsilon (0)$ for some $0 < epsilon < R$. Since $omega in omega(X')$, $d omega = 0$ on $X'$. On $U_k' inter X'$, $f_k omega = omega$, hence
         $
         integral.double_X d(f_k omega) &= lim_(epsilon' -> 0) integral.double_(epsilon' <= |z| <= R) d(f_k omega) = integral_(|z| = R) f_k omega - lim_(epsilon' -> 0) integral_(|z| = epsilon') f_k omega \
         &= -lim_(epsilon' -> 0) integral_(|z| = epsilon') omega = -2pi i "Re"s_(a_k)(omega).
@@ -2751,7 +2751,7 @@ Let $X$ be a compact Riemann surface of genus $g >= 1$ and $omega_1, dots.h, ome
         $
         then either $H_a = omega(X)$ or $"codim" H_a = 1$. Sine $inter.big_(a in X) H_a = \{ 0 \}$, we can find $a_1 in X$ such that $H_(a_1) != omega(X)$, then find $a_2 in X$ such that $H_(a_1) inter H_(a_2) != H_(a_1)$, and so on, until we find $a_1, dots.h, a_g$ such that $inter.big_(k=1)^g H_(a_k) = \{ 0 \}$.
 
-        Let $omega_1, dots.h, omega_g$ be a basis of $omega(X)$. Find disjoint charts $(U_k, z_k)$ around $a_k$ for every $k$ such that $z_k(a_k) = 0$ and $U_k tilde.equiv B_1(0)$. Locally write $omega_i|_(U_j) = phi.alt_(i j) d z_j$ for some holomorphic function $phi.alt_(i j) in cal(O)(U_j)$. Consider the matrix $A = (phi.alt_(i j)(a_j))_(1 <= i, j <= g)$, then $A$ is full-rank since $\{ omega_i \}$ is a basis of $omega(X)$ and $inter.big_(k=1)^g H_(a_k) = \{ 0 \}$. Define a map
+        Let $omega_1, dots.h, omega_g$ be a basis of $omega(X)$. Find disjoint charts $(U_k, z_k)$ around $a_k$ for every $k$ such that $z_k(a_k) = 0$ and $U_k tilde.equiv B_1 (0)$. Locally write $omega_i|_(U_j) = phi.alt_(i j) d z_j$ for some holomorphic function $phi.alt_(i j) in cal(O)(U_j)$. Consider the matrix $A = (phi.alt_(i j)(a_j))_(1 <= i, j <= g)$, then $A$ is full-rank since $\{ omega_i \}$ is a basis of $omega(X)$ and $inter.big_(k=1)^g H_(a_k) = \{ 0 \}$. Define a map
         $
         F: U_1 times dots times U_g -> CC^g, quad  (x_1, dots.h, x_g) |-> (sum_(j=1)^g integral_(a_j)^(x_j) omega_1, dots.h, sum_(j=1)^g integral_(a_j)^(x_j) omega_g).
         $
@@ -2856,9 +2856,9 @@ A weak solution is weak in the sense that it may not be a meromorphic function o
 ]
 
 #proof[
-        Choose disjoint charts $(U_j, z_j)$ around $a_j$ for every $j$ such that $z_j(a_j) = 0$ and $U_j tilde.equiv B_1(0)$ such that $f = psi_j z_j^(k_j)$ with $psi_j in cal(E)(U_j)$ and $psi_j(x) != 0$ for every $x in U_j$. 
+        Choose disjoint charts $(U_j, z_j)$ around $a_j$ for every $j$ such that $z_j(a_j) = 0$ and $U_j tilde.equiv B_1 (0)$ such that $f = psi_j z_j^(k_j)$ with $psi_j in cal(E)(U_j)$ and $psi_j(x) != 0$ for every $x in U_j$. 
 
-        Suppose $0 < r < r' < 1$. Exists $phi.alt_j in cal(E)(X)$ such that $"supp" (phi.alt_j) subset B_(r')(0)$ and $phi.alt_j = 1$ on $B_r(0)$ for every $j$. Let $g_j = phi.alt_j g in cal(E)(X)$, then
+        Suppose $0 < r < r' < 1$. Exists $phi.alt_j in cal(E)(X)$ such that $"supp" (phi.alt_j) subset B_(r')(0)$ and $phi.alt_j = 1$ on $B_r (0)$ for every $j$. Let $g_j = phi.alt_j g in cal(E)(X)$, then
         $
         integral.double_(U_j) (d f)/(f) and d g_j &= integral.double_(U_j) (k_j (d z_j)/(z_j) + (d psi_j)/(psi_j)) and d g_j \
         &= integral.double_(U_j) k_j (d z_j)/(z_j) and d g_j + integral.double_(U_j) (d psi_j)/(psi_j) and d g_j \
@@ -2882,7 +2882,7 @@ A weak solution is weak in the sense that it may not be a meromorphic function o
     $
 ]
 #proof[
-        Suppose that $U tilde.equiv B_1(0) subset.eq CC$. Let $a = c(0)$ and $b = c(1)$. Let $c([0, 1]) subset B_r(0)$ for some $r < 1$. Note that $(z - a)/(z - b)$ is nowhere vanishing holomorphic function on $\{ r < |z| < 1 \}$, hence exists a well-defined holomorphic branch of $log (z - a)/(z - b)$ on $\{ r < |z| < 1 \}$. Choose $psi in cal(E)(U)$ such that $psi = 1$ on $B_r(0)$ and $"supp" (psi) subset B_(r')(0)$ for some $r < r' < 1$. Define
+        Suppose that $U tilde.equiv B_1 (0) subset.eq CC$. Let $a = c(0)$ and $b = c(1)$. Let $c([0, 1]) subset B_r (0)$ for some $r < 1$. Note that $(z - a)/(z - b)$ is nowhere vanishing holomorphic function on $\{ r < |z| < 1 \}$, hence exists a well-defined holomorphic branch of $log (z - a)/(z - b)$ on $\{ r < |z| < 1 \}$. Choose $psi in cal(E)(U)$ such that $psi = 1$ on $B_r (0)$ and $"supp" (psi) subset B_(r')(0)$ for some $r < r' < 1$. Define
         $
         f(z) = cases(
             "exp" (psi(z) log (z - a)/(z - b)), r < |z| < 1,
@@ -2895,7 +2895,7 @@ A weak solution is weak in the sense that it may not be a meromorphic function o
         (1)/(2pi i) integral.double_X (d f)/(f) and omega = (1)/(2pi i) integral.double_(|z| <= r') d(g (d f)/(f)) = g(b) - g(a) = integral_c omega.
         $
 
-        In general, by compactness of $c([0, 1])$, we can find a partition $0 = t_0 < t_1 < dots < t_n = 1$ such that $c([t_(j-1), t_j]) subset U_j$ for some $U_j tilde.equiv B_1(0)$ for every $j$. Let $c_j = c|_([t_(j-1), t_j])$ for every $j$. By the previous case, exists a weak solution $f_j$ of $partial c_j$ with $f_j|_(X without U_j) equiv 1$ such that for all $omega in cal(E)^((1))(X)$ with $d omega = 0$, we have
+        In general, by compactness of $c([0, 1])$, we can find a partition $0 = t_0 < t_1 < dots < t_n = 1$ such that $c([t_(j-1), t_j]) subset U_j$ for some $U_j tilde.equiv B_1 (0)$ for every $j$. Let $c_j = c|_([t_(j-1), t_j])$ for every $j$. By the previous case, exists a weak solution $f_j$ of $partial c_j$ with $f_j|_(X without U_j) equiv 1$ such that for all $omega in cal(E)^((1))(X)$ with $d omega = 0$, we have
         $
         integral_(c_j) omega = (1)/(2pi i) integral.double_X (d f_j)/(f_j) and omega.
         $
@@ -2983,7 +2983,7 @@ for every $f in cal(D)(X)$, which is a distribution since if $f_n xarrow(cal(D))
 #proposition[
     There exists $rho in cal(D)(CC)$ such that
     
-    + $"supp" (rho) subset.eq B_1(0)$;
+    + $"supp" (rho) subset.eq B_1 (0)$;
     + $rho(z) = rho(|z|)$ for every $z in CC$;
     + $integral.double_CC rho(x + i y) d x d y = 1$.
     
@@ -3508,7 +3508,7 @@ $
 $
 since $H^1(X, CC) = 0$. 
 
-#lemma[
+#lemma(id: "lm:holomorphic-log")[
     Suppose $X$ is a Riemann surface with $"Rh"_(cal(O))^1 (X) = 0$, then
     + for every holomorphic function $f in cal(O)^* (X)$, there exists $g in cal(O)(X)$ such that $f = e^g$;
     + every harmonic function $u: X -> RR$ is the real part of some holomorphic function $f in cal(O)(X)$.
@@ -3530,15 +3530,30 @@ since $H^1(X, CC) = 0$.
     $
     |f| = |e^(-h + log g)| = e^(-u + log |g|). 
     $
-    On $partial Y$, $e^(-u + log |g|) = 1$, so $|f|$ can be continued to a continuous function $phi$ on $overline(Y)$. By maximum principle, $|f| < 1$ on $Y$, so $f(Y) subset DD$. We now show that the mapping is proper. It suffices to show that for every $r < 1$, the preimage $Y_r$ of the disk $overline(B_R(0))$ is compact in $Y$. But
+    On $partial Y$, $e^(-u + log |g|) = 1$, so $|f|$ can be continued to a continuous function $phi$ on $overline(Y)$. By maximum principle, $|f| < 1$ on $Y$, so $f(Y) subset DD$. We now show that the mapping is proper. It suffices to show that for every $r < 1$, the preimage $Y_r$ of the disk $overline(B_r (0))$ is compact in $Y$. But
     $
-    f^(-1) (overline(B_R(0))) = { y in Y : |f(y)| <= r } = { y in overline(Y) : phi(y) <= r }
+    f^(-1) (overline(B_r (0))) = { y in Y : |f(y)| <= r } = { y in overline(Y) : phi(y) <= r }
     $
     is closed in $overline(Y)$, hence compact. Therefore, $f$ is a proper holomorphic mapping from $Y$ to $DD$. Since the value zero is taken exactly once by $f$ at $a$, $f$ is a biholomorphism from $Y$ to $DD$.
     $qed$
 ]
 
 == Riemann Mapping Theorem
+
+#lemma(id: "lm:schwarz-lemma")[
+    Let $f: B_r (0) -> B_r (0)$ be a holomorphic mapping with $f(0) = 0$ and $f'(0) = 1$, then $r <= R$.
+]
+#proof[
+    By Cauchy's integral formula, for $alpha = partial overline(B_(r_n-epsilon)(0))$ for $epsilon$ small, we have
+    $
+    f'(0) = 1/(2 pi i) integral.cont_alpha (f(z))/(z^2) d z,
+    $
+    so
+    $
+    |f'(0)| <= 1/(2 pi) integral.cont_alpha (|f(z)|)/(|z|^2) |d z| <= 1/(2 pi) (r_(n+1))/(r_n - epsilon)^2 2 pi (r_n - epsilon) = r_(n+1)/(r_n - epsilon),
+    $
+    hence $r_n <= r_(n+1)$ since $epsilon$ is arbitrary. 
+]
 
 #theorem(name: "Riemann Mapping Theorem")[
     Let $X$ be a Riemann surface with $"Rh"_(cal(O))^1 (X) = 0$, then $X$ is biholomorphic to either $PP^1$, $CC$ or $DD$.
@@ -3552,30 +3567,197 @@ since $H^1(X, CC) = 0$.
     $
     but $integral_alpha h_n omega_0 = 0$ since $h_n omega_0$ is a holomorphic 1-form on $X$ and $"Rh"_(cal(O))^1 (X) = 0$, so $integral_alpha omega = 0$. Since $alpha$ is arbitrary, we have $omega$ has primitive on $Y_i$, so $"Rh"_(cal(O))^1 (Y_i) = 0$.
 
-    By @thm:simple-riemann-mapping, for each $i$, there exists a biholomorphic mapping $g_i: Y_i -> DD$. Choose a point $a in Y_0$ and a chart $(U, z)$ around $a$ with $U subset Y_0$ and $z(a) = 0$. By some linear fractional transformations, exists some $f_i$ mapping $Y_i$ to some disk centered at $0$ with radius $r_i$ in $CC$. We claim that $r_n <= r_(n+1)$ for every $n$. Consider the mapping $h := f_(n+1) compose f_n^(-1)$, which sends $B_(r_n)$ to $B_(r_(n+1))$ and satisfies $h(0) = 0$ and $h'(0) = 1$. By Cauchy's integral formula, for $alpha = partial overline(B_(r_n-epsilon)(0))$ for $epsilon$ small, we have
-    $
-    h'(0) = 1/(2 pi i) integral.cont_alpha (h(z))/(z^2) d z,
-    $
-    so
-    $
-    |h'(0)| <= 1/(2 pi) integral.cont_alpha (|h(z)|)/(|z|^2) |d z| <= 1/(2 pi) (r_(n+1))/(r_n - epsilon)^2 2 pi (r_n - epsilon) = r_(n+1)/(r_n - epsilon),
-    $
-    hence $r_n <= r_(n+1)$ since $epsilon$ is arbitrary. Define $R = lim_(n -> oo) r_n in (0, oo]$. We claim that $X$ is biholomorphic to $B_R(0)$. 
+    By @thm:simple-riemann-mapping, for each $i$, there exists a biholomorphic mapping $g_i: Y_i -> DD$. Choose a point $a in Y_0$ and a chart $(U, z)$ around $a$ with $U subset Y_0$ and $z(a) = 0$. By some linear fractional transformations, exists some $f_i$ mapping $Y_i$ to some disk centered at $0$ with radius $r_i$ in $CC$. We claim that $r_n <= r_(n+1)$ for every $n$. Consider the mapping $h := f_(n+1) compose f_n^(-1)$, which sends $B_(r_n)$ to $B_(r_(n+1))$ and satisfies $h(0) = 0$ and $h'(0) = 1$. By @lm:schwarz-lemma, $r_n <= r_(n+1)$ for every $n$. Define $R = lim_(n -> oo) r_n in (0, oo]$. We claim that $X$ is biholomorphic to $B_r (0)$. 
 
     The mapping $z |-> f_0^(-1)(r_0 z)$ maps $D$ to $Y_0$ biholomorphically. Set
     $
     g_n(z) := 1/(r_0) f_n (f_0^(-1)(r_0 z)),
     $
-    then $g_n: DD -> CC$ is an injective holomorphic mapping with $g_n(0) = 0$ and $g_n'(0) = 1$. By @thm:injective-holomorphic-compact, exists a subsequence ${g_(n_k^0)}$ of ${g_n}$ that converges uniformly on compact subsets, then ${f_(n_k^0)}$ also converges uniformly on compact subsets. Similarly, we can find a subsequence ${f_(n_k^1)}$ of ${f_(n_k^0)}$ that converges uniformly on compact subsets, and so on. By diagonalization, pick the subsequence ${f_(n_k)} = {f_(n_k^k)}$, then for every $m$, the sequence ${f_(n_k)}_(k>=m)$ converges uniformly on compact subsets of $Y_m$. Let $f = lim_(k -> oo) f_(n_k)$, then $f$ is an injective holomorphic mapping from $X$ to $B_R(0)$ such that $f(0) = 0$ and $f'(0) = 1$. We claim that $f$ is surjective. If not, then we have $"Rh"_(cal(O))^1 (X) = "Rh"_(cal(O))^1 (f(X)) = 0$. By @lm:shrink-holomorphic, exists some $r < R$ and holomorphic function $g: f(X) -> B_r(0)$ such that $g(0) = 0$ and $g'(0) = 1$. Choose $n$ large enough such that $r_n > r$ and set $h = g compose f compose f_n^(-1): B_(r_n)(0) -> B_r(0)$, then $h(0) = 0$ and $h'(0) = 1$, contradicting the Schwarz lemma since $r_n > r$. Therefore, $f$ is a biholomorphic mapping from $X$ to $B_R(0)$, so $X$ is biholomorphic to $B_R(0)$. If $R = oo$, then $X$ is biholomorphic to $CC$, otherwise, $X$ is biholomorphic to $DD$.
+    then $g_n: DD -> CC$ is an injective holomorphic mapping with $g_n(0) = 0$ and $g_n'(0) = 1$. By @thm:injective-holomorphic-compact, exists a subsequence ${g_(n_k^0)}$ of ${g_n}$ that converges uniformly on compact subsets, then ${f_(n_k^0)}$ also converges uniformly on compact subsets. Similarly, we can find a subsequence ${f_(n_k^1)}$ of ${f_(n_k^0)}$ that converges uniformly on compact subsets, and so on. By diagonalization, pick the subsequence ${f_(n_k)} = {f_(n_k^k)}$, then for every $m$, the sequence ${f_(n_k)}_(k>=m)$ converges uniformly on compact subsets of $Y_m$. Let $f = lim_(k -> oo) f_(n_k)$, then $f$ is an injective holomorphic mapping from $X$ to $B_r (0)$ such that $f(0) = 0$ and $f'(0) = 1$. We claim that $f$ is surjective. If not, then we have $"Rh"_(cal(O))^1 (X) = "Rh"_(cal(O))^1 (f(X)) = 0$. By @lm:shrink-holomorphic, exists some $r < R$ and holomorphic function $g: f(X) -> B_r (0)$ such that $g(0) = 0$ and $g'(0) = 1$. Choose $n$ large enough such that $r_n > r$ and set $h = g compose f compose f_n^(-1): B_(r_n)(0) -> B_r (0)$, then $h(0) = 0$ and $h'(0) = 1$, contradicting the Schwarz lemma since $r_n > r$. Therefore, $f$ is a biholomorphic mapping from $X$ to $B_R (0)$, so $X$ is biholomorphic to $B_R (0)$. If $R = oo$, then $X$ is biholomorphic to $CC$, otherwise, $X$ is biholomorphic to $DD$.
     $qed$
 ]
 
-// --------------------------------
+== Riemann Mapping Theorem (contd.)
+
+#lemma(id: "lm:shrink-holomorphic")[
+    If $0 in Y subset.neq B_R (0)$ with $0 < R <= oo$ and $"Rh"_(cal(O))^1 (Y) = 0$, then there exists some $r < R$ and holomorphic function $f: Y -> B_r (0)$ such that $f(0) = 0$ and $f'(0) = 1$.
+]
+#proof[
+    If $R = oo$, then let $a in CC without Y$. Consider the holomorphic function $phi: CC -> CC$ sending $z |-> z-a$, then $0 in.not phi(Y)$. By @lm:holomorphic-log, exists $g' in cal(O)(Y)$ such that $phi|_Y = e^(g')$, set $g = exp(g'/2)$, then $g in cal(O)(Y)$ and $g^2 = phi|_Y$. Suppose $g(0) = b != 0$, then set
+    $
+    psi(z) = (z - b)/(z - overline(b)) " and " h = psi compose g: Y -> B_1 (0),
+    $
+    then $h(0) = 0$ and
+    $
+    h'(0) = psi'(b) g'(0) = 1/(2b(b - overline(b))) =: l,
+    $
+    then $f = h/l$ is the desired holomorphic function with $r = 1/|l|$. 
+
+    If $R < oo$, WLOG assume that $R = 1$. Pick $a in B_1 (0) without Y$ and consider
+    $
+    phi: B_1 (0) -> B_1 (0), quad z |-> (z - a)/(1 - overline(a) z).
+    $
+    Again, $0 in.not phi(Y)$, so by the same argument as above, exists $g in cal(O)(Y)$ such that $g^2 = phi|_Y$. If $g(0) = b$, then set
+    $
+    psi(z) = (z - b)/(1 - overline(b) z) " and " h = psi compose g: Y -> B_1 (0),
+    $
+    then $h(0) = 0$ and
+    $
+    h'(0) = psi'(b) g'(0) = 1/(1 - |b|^2) dot (1 - |a|^2)/(2b) = (1 + |b|^2)/(2b) =: l,
+    $
+    which has modulus greater than 1, so $f = h/l$ is the desired holomorphic function with $r = 1/|l| < 1$.
+    $qed$
+]
+
+Recall Montel's theorem, which states that any locally bounded family of holomorphic functions on a domain is normal, i.e. every sequence has a subsequence that converges uniformly on compact subsets.
+
+#proposition[
+    Let $G subset CC$ be a domain such that $CC without G$ has nonempty interior. Fix $w_0 in G$, then the family
+    $
+    K = {f in cal(O)(B_1 (0)): f(B_1 (0)) subset G, f(0) = w_0}
+    $
+    is compact in $cal(O)(B_1 (0))$.
+]
+#proof[
+    Let $a in CC without G$ and $B_r (a) subset CC without G$ for some $r > 0$. Consider
+    $
+    phi: G -> CC, quad z |-> 1/(z - a),
+    $
+    then $G arrow.r.tilde phi(G) subset B_(1/r)(0)$, i.e. $f(B_1 (0)) subset G$ is bounded by $1/r$ for every $f in K$, so $K$ is locally bounded. By Montel's theorem, the family $K$ is normal, i.e. $K$ is relatively compact in $cal(O)(B_1 (0))$. Compactness follows from the fact that $K$ is closed in $cal(O)(B_1 (0))$ since the conditions $f(B_1 (0)) subset G$, $f(0) = w_0$ are preserved under uniform convergence on compact subsets.
+]
 
 #theorem(id: "thm:injective-holomorphic-compact")[
     The set of all injective holomorphic functions from $DD$ to $CC$ with $f(0) = 0$ and $f'(0) = 1$ is compact in $cal(O)(DD)$.
 ]
+#proof[
+    Let $K$ be the set of all injective holomorphic functions from $DD$ to $CC$ with $f(0) = 0$ and $f'(0) = 1$, and let $(f_n)_(n in NN)$ be a sequence in $K$. Fix some $f_n$. If $B_r (0) subset f_n (B_1 (0))$, then the inverse $phi = (f_n)^(-1)|_(B_r (0))$ is a holomorphic function from $B_r (0)$ to $B_1 (0)$ with $phi(0) = 0$ and $phi'(0) = 1/f_n'(0) = 1$, so by the Schwarz lemma (@lm:schwarz-lemma), we have $r <= 1$. Therefore, we can define
+    $
+    r_n = sup {r > 0 : B_r (0) subset f_n (B_1 (0))},
+    $
+    for all $n in NN$ and $r_n <= 1$. Choose $a_n in partial overline(B_(r_n) (0))$ and $a_n in.not f_n(B_1 (0))$. Set $g_n := (f_n)/(a_n)$ so that $1 in.not g_n(B_1 (0))$. By construction we also have $B_1 (0) subset g_n (B_1 (0))$. Moreover, since $f_n$ is injective, $g_n$ is also injective, so $g_n (B_1 (0)) tilde.equiv B_1 (0)$, so $exists psi in cal(O)^* (g_n (B_1 (0)))$ such that $psi = sqrt(z-1)$, i.e. $psi^2 = z - 1$. Set $h_n = psi compose g_n$, then $h_n$ is a holomorphic function from $B_1 (0)$ to $CC^*$ and $h_n^2 = g_n - 1$. 
 
-#lemma(id: "lm:shrink-holomorphic")[
-    If $0 in Y subset.neq B_R(0)$ with $0 < R <= oo$ and $"Rh"_(cal(O))^1 (Y) = 0$, then there exists some $r < R$ and holomorphic function $f: Y -> B_r(0)$ such that $f(0) = 0$ and $f'(0) = 1$.
+    We claim that if $w in h_n (B_1 (0))$, then $-w in.not h_n (B_1 (0))$. If not, then there exists $z_1, z_2 in B_1 (0)$ such that $h_n(z_1) = w$ and $h_n(z_2) = -w$, so $g_n(z_1) = w^2 + 1 = g_n(z_2)$, forcing $z_1 = z_2$, so $w = -w ~> w = 0$, contradiction. 
+
+    Since $B_1 (0) subset g_n (B_1 (0))$, we have $U := psi(B_1 (0)) subset h_n (B_1 (0))$, so $h_n (B_1 (0)) = U inter (-U) = emptyset$. By the previous proposition, the family $K' = {h_n : n in NN}$ is compact in $cal(O)(B_1 (0))$. Since $f_n = a_n g_n = a_n (h_n^2 + 1)$, the family $K = {f_n : n in NN}$ is also compact in $cal(O)(B_1 (0))$, $(f_n)$ also has a subsequence $(f_(n_k))$ that converges uniformly on compact subsets to some function $f: B_1 (0) -> CC$. Clearly $f(0) = 0$ and $f'(0) = 1$. We claim that $f$ is injective. If not, then there exists $a in CC$ such that $f-a$ has at least two zeros in $B_1 (0)$, so pick some $r<1$ such that $f-a$ does not vanish on $partial overline(B_r (0))$ and
+    $
+    k = 1/(2 pi i) integral.cont_partial B_r (0) (f(z) - a)/(z^2) d z >= 2,
+    $
+    but the sequence $f_(n_k)$ is injective, so for $k$ large enough, $f_(n_k) - a$ also has at least two zeros in $B_1 (0)$, contradiction. Therefore, $f$ is injective, so $f in K$, hence $K$ is compact in $cal(O)(B_1 (0))$.
+    $qed$
 ]
+
+By Riemann Mapping Theorem, every simply connected Riemann surface is biholomorphic to either $PP^1$, $CC$ or $DD$. 
+
+#definition[
+    Let $X$ be a Riemann surface, we say $X$ is
+    + elliptic if $X$ is biholomorphic to $PP^1$;
+    + parabolic if $X$ is biholomorphic to $CC$;
+    + hyperbolic if $X$ is biholomorphic to $DD$.
+]
+
+#theorem[
+    Let $X$ be a non-compact Riemann surface, then
+    + $X$ is of elliptic type if and only if $X tilde.equiv PP^1$;
+    + $X$ is of parabolic type if and only if $X$ is isomorphic to one of $CC$, $CC^*$ or $CC slash Gamma$;
+    + all other Riemann surfaces are hyperbolic.
+]
+#proof[
+    Let $p: tilde(X) -> X$ be the universal covering map. Since $p$ is Galois, $G = "Deck"(p)$ acts on $tilde(X)$ without fixed points. 
+
+    If $tilde(X) equiv PP^1$, then $G$ is a subgroup of $"Aut"(PP^1)$. However, all nontrivial elements in $"Aut"(PP^1)$ have fixed points, so $G$ must be trivial, implying $X tilde.equiv tilde(X) slash G tilde.equiv PP^1$. 
+
+    If $tilde(X) equiv CC$, then $G$ is a subgroup of $"Aut"(CC)$. The only automorphisms of $CC$ without fixed points are translations, i.e.
+    $
+    G <= {z |-> z + a : a in CC}. 
+    $
+    Let $Gamma$ be the orbit of $0$ under $G$, then $Gamma$ is a discrete additive subgroup of $CC$. Let $V$ be the smallest real vector subspace of $CC$ containing $Gamma$. If $dim V = 0$, then $G = {"Id"}$, so $X tilde.equiv CC$. If $dim V = 1$, then $Gamma$ is generated by some nonzero element $a in CC$, so $Gamma = a ZZ$ and $X tilde.equiv CC slash Gamma equiv CC^*$. If $dim V = 2$, then $Gamma$ is generated by two linearly independent elements $a_1, a_2 in CC$, so $Gamma = a_1 ZZ + a_2 ZZ$ and $X tilde.equiv CC slash Gamma$.
+    $qed$
+]
+
+Let $X, Y$ be non-compact Riemann surfaces and $p: Y -> X$ a holomorphic unbranched Galois covering map with $G = "Deck"(p)$. $G$ acts on $cal(O)(Y)$ by $sigma f = f compose sigma^(-1)$ for $sigma in G$ and $f in cal(O)(Y)$ and let $h_sigma = f - sigma f$ for $sigma in G$, then for $sigma, tau in G$, we have the relation
+$
+h_(sigma tau) = f - sigma tau f = f - sigma f + sigma f - sigma tau f = h_sigma + sigma h_tau.
+$
+$h$ is called a crossed homomorphism from $G$ to $cal(O)(Y)$.
+
+#theorem[
+    Suppose $X, Y$ are non-compact Riemann surfaces and $p: Y -> X$ is a holomorphic unbranched Galois covering map with $G = "Deck"(p)$, then given any crossed homomorphism
+    $
+    phi: G -> cal(O)(Y), quad sigma |-> a_sigma, quad a_(sigma tau) = a_sigma + sigma a_tau,
+    $
+    exists $f in cal(O)(Y)$ such that $a_sigma = f - sigma f$ for every $sigma in G$. 
+]
+#proof[
+    Choose an open covering $frak(U) = (U_i)_(i in I)$ of $X$ such that $Y_i := p^(-1)(U_i) = union.sq.big_(j in J_i) V_j$ is a disjoint union of open sets and $p|_(V_j): V_j -> U_i$ is a biholomorphism for every $i, j$. Fix $V_(i j)$, then for all $V_(i j)$ exists a unique $sigma_j in G$ such that $sigma_j V_(i j_0) = V_(i j)$, so we can define a homeomorphism
+    $
+    phi: p^(-1)(U_i) -> U_i times G, quad y_j in V_(i j) |-> (p(y_j), sigma_j).
+    $
+    Let $phi_i = (p, eta_i)$ denote the restriction of $phi$ to $p^(-1)(U_i)$, then $phi_i: p^(-1)(U_i) -> U_i times G$ is a homeomorphism. Define $f_i: Y_i -> CC$ by $y in V_(i j) |-> a_(eta_i(y))(y)$. Note that for all $y in V_(i j)$, $eta_i (y) = sigma_j$ with $sigma_j (V_(i j 0)) = V_(i j)$, so $f_i|_(V_(i j)) = a_(sigma_j)|_{V_(i j)}$, so $f_i in cal(O)(Y_i)$. 
+
+    We claim that $f_i - sigma f_i = a_sigma$ for all $sigma in G$. For all $y in Y_i$, 
+    $
+    (sigma f_i)(y) &= f_i (sigma^(-1) (y)) \
+    &= a_(eta_i (sigma^(-1) (y))) (sigma^(-1) (y)) = a_(sigma^(-1) eta_i (y)) (sigma^(-1) (y)). 
+    $
+    Apply the relation $a_(sigma tau) = a_sigma + sigma a_tau$ with $tau = sigma^(-1) eta_i (y)$, we have
+    $
+    a_sigma (y) = a_(sigma tau) (y) - sigma a_tau (y) = a_(eta_i (y)) (y) - sigma a_(sigma^(-1) eta_i (y)) (y) = f_i (y) - sigma f_i (y).
+    $
+
+    Note that
+    $
+    g_(i j) := f_i - f_j = a_(eta_i (y)) - a_(eta_j (y)) = a_(eta_i (y) eta_j^(-1) (y)) in cal(O)(Y_i inter Y_j),
+    $
+    hence $(g_(i j)) in Z^1(frak(U), cal(O))$. Since $H^1(X, cal(O)) = 0$, we have $(g_(i j)) in B^1(frak(U), cal(O))$, so exists a family of holomorphic functions $(g_i)_(i in I)$ such that $g_(i j) = g_i - g_j$ on $U_i inter U_j$. Set $tilde(f_i) := f_i - g_i in cal(O)(Y_i)$. Also, 
+    $
+    tilde(f_i) - sigma tilde(f_i) = f_i - sigma f_i - g_i + sigma g_i = a_sigma + sigma g_i - g_i = a_sigma + g_(i j) - g_(i j) = a_sigma,
+    $
+    so there exists $f in cal(O)(Y)$ such that $f|_(Y_i) = tilde(f_i)$ for every $i$, hence $a_sigma = f - sigma f$ for every $sigma in G$.
+    $qed$
+]
+
+#corollary[
+    Let $X$ be a non-compact Riemann surface and $a: pi_1(X) -> CC, sigma |-> a_sigma$ be a group homomorphism, then there exists a holomorphic $1$-form $omega in Omega(X)$ such that
+    $
+    integral_sigma omega = a_sigma
+    $
+    for every $sigma in pi_1(X)$.
+]
+#proof[
+    Consider the universal covering $p: tilde(X) -> X$, then $pi_1(X) = "Deck"(p)$. By the previous theorem, exists $F in cal(O)(tilde(X))$ such that $a_sigma = F - sigma F$ for every $sigma in pi_1(X)$. Since
+    $
+    d F - sigma d F = d(F - sigma F) = d a_sigma = 0,
+    $
+    $d F$ is invariant under the action of $pi_1(X)$, so there exists a holomorphic 1-form $omega in Omega(X)$ such that $p^* omega = d F$, hence
+    $
+    integral_sigma omega = integral_sigma p^* omega = integral_sigma d F = F - sigma F = a_sigma
+    $
+    for every $sigma in pi_1(X)$.
+    $qed$
+]
+
+Let $X$ be a Riemann surface. A continuous mapping $p: E -> X$ is called a holomorphic vector bundle of rank $n$ on $X$, if every point $a in CC$ has a neighborhood $U$ such that there exists a homeomorphism $h$ on $p^(-1)(U)$ onto $U times CC^n$ such that the following diagram commutes:
+$
+#diagram(
+    $
+    p^(-1)(U) edge(->, tilde) edge(->, "d") & U times CC^n edge(->, "ld") \
+    U_i
+    $
+)
+$
+
+For an open covering $frak(U) = (U_i)_(i in I)$ of $X$, then consider the following commutative diagram:
+$
+#diagram(
+    $
+    & (U_i inter U_j) times CC^n edge(->, "dd", phi_(i j)) \
+    p^(-1)(U_i inter U_j) edge(->, "ru", phi_i) edge(->, "rd", phi_j, #right) & \
+    & (U_i inter U_j) times CC^n
+    $
+)
+$
+$phi_(i j)$ satisfies
+$
+phi_(i j)(x, t) = (x, g_(i j)(x) t)
+$
+for every $x in U_i inter U_j$ and $t in CC^n$. Each $g_(i j)$ is an element of $"GL"(n, cal(O)(U_i inter U_j))$, also we automatically have $g_(i j)g_(j k) = g_(i k)$ on $U_i inter U_j inter U_k$, hence $(g_(i j)) in Z^1(frak(U), "GL"(n, cal(O)))$. The mappings $g_(i j)$ are called the transition functions and $(g_(i j))$ is the cocycle associated to the atlas $(U_i, h_i)_(i in I)$.
