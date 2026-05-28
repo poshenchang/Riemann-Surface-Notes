@@ -3736,6 +3736,8 @@ $h$ is called a crossed homomorphism from $G$ to $cal(O)(Y)$.
     $qed$
 ]
 
+== Vector Bundles
+
 Let $X$ be a Riemann surface. A continuous mapping $p: E -> X$ is called a holomorphic vector bundle of rank $n$ on $X$, if every point $a in CC$ has a neighborhood $U$ such that there exists a homeomorphism $h$ on $p^(-1)(U)$ onto $U times CC^n$ such that the following diagram commutes:
 $
 #diagram(
@@ -3761,3 +3763,99 @@ $
 phi_(i j)(x, t) = (x, g_(i j)(x) t)
 $
 for every $x in U_i inter U_j$ and $t in CC^n$. Each $g_(i j)$ is an element of $"GL"(n, cal(O)(U_i inter U_j))$, also we automatically have $g_(i j)g_(j k) = g_(i k)$ on $U_i inter U_j inter U_k$, hence $(g_(i j)) in Z^1(frak(U), "GL"(n, cal(O)))$. The mappings $g_(i j)$ are called the transition functions and $(g_(i j))$ is the cocycle associated to the atlas $(U_i, h_i)_(i in I)$.
+
+A holomorphic section of $E$ is a holomorphic mapping $f: X -> E$ such that $p compose f = "Id"_X$. $f$ is holomorphic in the sense that for each $i$, the mapping
+$
+f|_(U_i): U_i -> U_i times CC^n, quad x |-> (x, f_i(x))
+$
+where each component of $f_i$ is a holomorphic function on $U_i$. The sheaf of all holomorphic sections of $E$ is denoted by $cal(O)_E$, where $cal(O)_E(U) = {f: U -> E : f "is" a "holomorphic section of" E "on" U}$ for every open set $U subset X$. 
+
+A meromerphic section of $E$ is a meromorphic mapping $f: X -> E$ such that $p compose f = "Id"_X$. 
+
+#lemma[
+    Suppose $X$ is a Riemann surface, $E$ is a holomorphic vector bundle on $X$ and $Y subset.double X$ is an open set. If $Y_0 subset Y$ is open, then the restriction mapping $H^1(Y, cal(O)_E) -> H^1(Y_0, cal(O)_E)$ is surjective. 
+]
+#proof[
+    If $U$ is a trivialization open set of $E$, i.e. exists holomorphic linear charts $h : E_(U) -> U times CC^n$, then
+    $
+    H^1(U, cal(O)_E) tilde.equiv H^1(U, cal(O)_U^n) tilde.equiv H^1(U, cal(O))^n = 0. 
+    $
+    Since $Y$ is relatively compact, we can find a finite open cover $frak(U) = (U_i)_(i=1)^m$ of $Y$ such that each $U_i$ is a trivialization open set of $E$. Note that for every open $V subset U_i$, we also have
+    $
+    H^1(V, cal(O)_E) tilde.equiv H^1(V, cal(O))^n = 0. 
+    $
+    Set $Y_k = Y_0 union (union.big_(i=1)^k U_i)$ for $k = 0, dots, m$, then $Y_0 subset Y_1 subset dots subset Y_m = Y$. We claim that the restriction mapping $H^1(Y_k, cal(O)_E) -> H^1(Y_(k-1), cal(O)_E)$ is surjective for every $k = 1, dots, m$. Fix $k$ and set
+    $
+    V_i = U_i inter Y_(k-1) " for " i = 1, dots, m, \
+    V_i' = V_i "for" i != k "and" V_k' = U_k, 
+    $
+    then $frak(V) = (V_i)_(i=1)^m$ and $frak(V') = (V_i')_(i=1)^m$ are Leray covers of $Y_(k-1)$ and $Y_k$ respectively. Also $V_i inter V_j = V_i' inter V_j'$ for every $i, j$, so
+    $
+    Z^1(frak(V), cal(O)_E) = Z^1(frak(V'), cal(O)_E). 
+    $
+    Consider the following commutative diagram:
+    // $
+    // #diagram(
+    //     $
+    //     C^0(frak(V'), cal(O)_E) edge(->, "r", "res") edge(->, "d", delta) & C^0(frak(V), cal(O)_E) edge(->, "d", "delta") \
+    //     C^1(frak(V'), cal(O)_E) edge(->, "r", "Id") C^1(frak(V), cal(O)_E)
+    //     $
+    // )
+    // $
+    where the horizontal arrows are restriction mappings and the vertical arrows are coboundary mappings. We can see that $B^1(frak(V'), cal(O)_E) arrow.r.hook B^1(frak(V), cal(O)_E)$, so the restriction mapping $H^1(Y_k, cal(O)_E) -> H^1(Y_(k-1), cal(O)_E)$ is surjective. By induction, the restriction mapping $H^1(Y, cal(O)_E) -> H^1(Y_0, cal(O)_E)$ is surjective.
+    $qed$
+]
+
+#theorem[
+    Suppose $Y$ is a relatively compact domain of a Riemann surface $X$ and $E$ is a holomorphic vector bundle on $X$, then $H^1(Y, cal(O)_E) = 0$.
+]
+#proof[
+    Let $Y subset.double Y' subset.double X$ and
+    $
+    Y' = union.big_(i=1)^m U_i
+    $
+    where $U_i$ are trivialization open sets of $E$. Pick $V_i subset.double U_i$ such that $Y = union.big_(i=1)^m V_i$, then $frak(U) = (U_i)_(i=1)^m$ and $frak(V) = (V_i)_(i=1)^m$ are Leray covers of $Y'$ and $Y$ respectively. Recall that $cal(O)_(U_i)(U_i)$, $cal(O)_(U_i inter U_j)(U_i inter U_j)$ can be made Frechet spaces with the topology of uniform convergence on compact subsets, and the restriction mappings are continuous. Similarly for $C^0$ and $C^1$, also $Z^1(frak(U), cal(O)_E) subset C^1(frak(U), cal(O)_E)$ is a closed subspace, so $Z^1(frak(U), cal(O)_E)$ is also a Frechet space. 
+
+    We claim that the restriction $beta: Z^1(frak(U), cal(O)_E) -> Z^1(frak(V), cal(O)_E)$ is compact. Since $overline(V) subset U$ is compoct, the collection
+    $
+    W = {f in cal(O)(U) : sup_(x in overline(V)) |f(x)| <= 1}
+    $
+    is a neighborhood of $0$ in $cal(O)(U)$. By Montel's theorem, 
+    $
+    beta(W) subset.eq {g in cal(O)(V) : sup_(x in V) |g(x)| <= 1}
+    $
+    is compact in $cal(O)(V)$, so $beta$ is a compact map. 
+
+    Consider the mappings from $C^0(frak(V), cal(O)_E) times Z^1(frak(U), cal(O)_E) -> Z^1(frak(V), cal(O)_E)$ defined by
+    $
+    phi: (eta, xi) |-> delta eta - beta(xi), quad psi: (eta, xi) |-> beta(xi). 
+    $
+    By the previous lemma, we know that the restriction map $H^1(Y', cal(O)_E) -> H^1(Y, cal(O)_E)$ is surjective, i.e. the projection from $Z^1(frak(U), cal(O)_E)$ to $H^1(frak(V), cal(O)_E)$ is surjective, so $phi$ is surjective. Since $psi$ is compact, by Schwartz's theorem, the image of the mapping $phi + psi$ has finite codimension, but this image is precisely the subspace $B^1(frak(V), cal(O)_E)$, so $H^1(Y, cal(O)_E) = Z^1(frak(V), cal(O)_E) slash B^1(frak(V), cal(O)_E)$ is finite dimensional. 
+    $qed$
+]
+
+#corollary[
+    If $Y subset.double X$, then $E$ has a nontrivial global meromorphic section over $Y$. 
+]
+#proof[
+    Pick $a in Y$ and a chart $(U_1, z)$ around $a$ with $U_1 tilde.equiv B_1 (0)$ and $E|_(U_1) = U_1 times CC^n$. Let $U_2 = X without {a}$, then $frak(U) := (U_1, U_2)$ is an open cover of $X$. Let $k := dim H^1(Y, cal(O)_E)$. For each $i = 1, dots, k+1$, let $g_(1 i)(z) = (z^(-i), dots, z^(-i))$ and $g_(2 i)(z) = (0, dots, 0)$. Let $f_i (z) = g_(1 i)(z) - g_(2 i)(z) in cal(O)(U_1 inter U_2)$, hence ${f_i} in Z^1(frak(U) inter Y, cal(O)_E)$. Since $dim H^1(Y, cal(O)_E) = k$, there exists $a_1, dots, a_(k+1)$ not all zero such that
+    $
+    sum_(i=1)^(k+1) a_i f_i in B^1(frak(U) inter Y, cal(O)_E),
+    $
+    so exists $h_1 in cal(O)_E(U_1 inter Y)$ and $h_2 in cal(O)_E(U_2 inter Y)$ such that
+    $
+    sum_(i=1)^(k+1) a_i f_i = h_2 - h_1,
+    $
+    hence we can define a global meromorphic section $f$ of $E$ on $Y$ by setting
+    $
+    f|_(U_1 inter Y) = sum_(i=1)^(k+1) a_i z^(-i) + h_1, quad f|_(U_2 inter Y) = h_2.
+    $
+    $qed$
+]
+
+#corollary[
+    Every holomorphic vector bundle on a compact Riemann surface has a nontrivial global meromorphic section.
+]
+#proof[
+    Follows from the previous corollary by picking $Y = X$. $qed$
+]
